@@ -1,0 +1,58 @@
+{
+  "name": "bichar",
+  "version": "1.0.0",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node .",
+    "pretest": "jshint ."
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "bootstrap": {
+      "depends": [
+        "jquery:jQuery"
+      ]
+    }
+  },
+  "dependencies": {
+    "compression": "^1.0.3",
+    "cors": "^2.5.2",
+    "loopback": "^2.22.0",
+    "loopback-boot": "^2.6.5",
+    "loopback-component-explorer": "^2.1.0",
+    "loopback-datasource-juggler": "^2.39.0",
+    "serve-favicon": "^2.0.1",
+    "bootstrap": "~3.3.6",
+    "browserify": "~13.0.0",
+    "gulp-uglify": "~1.5.1",
+    "gulp-concat": "~2.6.0",
+    "del": "~2.2.0",
+    "lodash": "~4.0.0",
+    "path": "~0.12.7",
+    "fs-extra": "~0.26.4",
+    "gulp-less": "~3.0.5",
+    "angular": "~1.4.9",
+    "angular-resource": "~1.4.9",
+    "angular-ui-router": "~1.0.0-alpha0",
+    "angular-messages": "~1.4.9",
+    "browserify-css": "~0.8.4",
+    "browserify-shim": "~3.8.12",
+    "jquery": "~2.2.0",
+    "gulp": "~3.9.0"
+  },
+  "devDependencies": {
+    "jshint": "^2.5.6",
+    "vinyl-source-stream": "~1.1.0",
+    "gulp-uglify": "~1.5.1",
+    "gulp-concat": "~2.6.0"
+  },
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "description": "Prasta bichar samajko unnati ka lagi."
+}
