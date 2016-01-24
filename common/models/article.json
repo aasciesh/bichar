@@ -1,0 +1,42 @@
+{
+  "name": "article",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "body": {
+      "type": "string",
+      "required": true
+    },
+    "lead": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "comments": {
+      "type": "hasMany",
+      "model": "comment",
+      "polymorphic": {
+        "as": "commentable",
+        "foreignKey": "commentableId",
+        "discriminator": "commentableType"
+      }
+    },
+    "profile": {
+      "type": "belongsTo",
+      "model": "profile",
+      "foreignKey": "profileId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,25 @@
+{
+  "name": "subscription",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "subscriber": {
+      "type": "belongsTo",
+      "model": "profile",
+      "foreignKey": "subscriberId"
+    },
+    "subscribed_author": {
+      "type": "belongsTo",
+      "model": "profile",
+      "foreignKey": "subscribedAuthorId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

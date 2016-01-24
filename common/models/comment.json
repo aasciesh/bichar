@@ -1,0 +1,37 @@
+{
+  "name": "comment",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "ownerId": {
+      "type": "number",
+      "required": true
+    },
+    "ownerType": {
+      "type": "string",
+      "required": true
+    },
+    "body": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "commentable": {
+      "type": "belongsTo",
+      "polymorphic": true
+    },
+    "profile": {
+      "type": "belongsTo",
+      "model": "profile",
+      "foreignKey": "profileId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -42,7 +42,8 @@
     "browserify-css": "~0.8.4",
     "browserify-shim": "~3.8.12",
     "jquery": "~2.2.0",
-    "gulp": "~3.9.0"
+    "gulp": "~3.9.0",
+    "loopback-connector-mongodb": "~1.13.3"
   },
   "devDependencies": {
     "jshint": "^2.5.6",

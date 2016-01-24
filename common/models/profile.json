@@ -1,0 +1,46 @@
+{
+  "name": "profile",
+  "base": "user",
+  "strict": false,
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "articles": {
+      "type": "hasMany",
+      "model": "article",
+      "foreignKey": "userId"
+    },
+    "comments": {
+      "type": "hasMany",
+      "model": "comment",
+      "foreignKey": ""
+    },
+    "subscribed_authors": {
+      "type": "hasMany",
+      "model": "profile",
+      "foreignKey": "subscribedAuthorId",
+      "through": "subscription"
+    },
+    "subscribers": {
+      "type": "hasMany",
+      "model": "profile",
+      "foreignKey": "subscriberId",
+      "through": "subscription"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
